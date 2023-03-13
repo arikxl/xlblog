@@ -25,7 +25,6 @@ const Footer = () => {
           <BsFacebook className="w-6 h-6 text-white/50 hover:text-white duration-300 cursor-pointer" />
           <BsGithub className="w-6 h-6 text-white/50 hover:text-white duration-300 cursor-pointer" />
           <BsLinkedin className="w-6 h-6 text-white/50 hover:text-white duration-300 cursor-pointer" />
-          <BsTwitter className="w-6 h-6 text-white/50 hover:text-white duration-300 cursor-pointer" />
         </div>
       </div>
     </div>

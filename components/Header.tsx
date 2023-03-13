@@ -1,15 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
+
 import logoDark from "../public/images/logoDark.png";
+import AppLogo from './AppLogo';
 
 const Header = () => {
   return (
     <div className="w-full h-20 border-b-[1px] border-b-black font-titleFont sticky top-0 bg-white z-50 px-4">
       <div className="max-w-7xl h-full mx-auto flex justify-between items-center">
         <Link href="/">
-          <div>
-            <Image width={80} height={80} src={logoDark} alt="logoDark" />
-          </div>
+          <AppLogo />
         </Link>
         <div>
           <ul className="hidden lg:inline-flex gap-8 uppercase text-sm font-semibold">

@@ -7,3 +7,12 @@
     @apply text-primaryColor hover:text-secondaryColor cursor-pointer duration-300;
   }
 }
+
+.logo{
+  font-size: 2rem;
+  color:rgb(52 73 94);
+}
+.logo span{
+  font-family:'Pacifico', cursive ;
+
+}

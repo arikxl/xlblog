@@ -10,16 +10,12 @@ export default function Home() {
     <div>
       <Head>
         <title>XLblog</title>
-        <link rel="icon" href="/smallLogo.ico" />
+        <link rel="icon" href="https://res.cloudinary.com/arikxl/image/upload/v1678745162/Ella2023/ntinbkc5taw9wrrspllq.png" />
       </Head>
 
       <main className="font-bodyFont">
-        {/* ============ Header Start here ============ */}
         <Header />
-        {/* ============ Header End here ============== */}
-        {/* ============ Banner Start here ============ */}
         <Banner />
-        {/* ============ Banner End here ============== */}
         <div className="max-w-7xl mx-auto h-60 relative">
           <BannerBottom />
         </div>

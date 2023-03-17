@@ -1,8 +1,9 @@
 import React from 'react';
 
-const AppLogo = () => {
+const AppLogo = ({ color }) => {
+
   return (
-      <h1 className='logo'>XL<span>blog</span></h1>
+    <h1 className={color === 'sec' ? 'logo color' : 'logo'}>XL<span>blog</span></h1>
   )
 }
 

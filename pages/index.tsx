@@ -7,6 +7,7 @@ import Footer from "../components/Footer";
 import BannerBottom from "../components/BannerBottom";
 import { sanityClient, urlFor } from '../sanity';
 import { Post } from "../typings";
+import Image from "next/image";
 
 interface Props{
   posts: [Post]
@@ -27,17 +28,16 @@ export default function Home({posts}: Props) {
         <div className="max-w-7xl mx-auto h-60 relative">
           <BannerBottom />
         </div>
-        {/* ============ Banner-Bottom End here ======= */}
-        {/* ============ Post Part Start here ========= */}
+  
+  
         <div className="max-w-7xl mx-auto py-20 px-4">
           {posts.map((p) => (
-            <div key={p._id}>{ p.title}</div>
+            <Image width={380} height={350} src={urlFor(p.mainImage).url()!} />
+            // <div key={p._id}>{ p.title}</div>
           ))}
         </div>
-        {/* ============ Post Part End here =========== */}
-        {/* ============ Footer Start here============= */}
+       
         <Footer />
-        {/* ============ Footer End here ============== */}
       </main>
     </div>
   );

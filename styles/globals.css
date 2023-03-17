@@ -12,6 +12,10 @@
   font-size: 2rem;
   color:rgb(52 73 94);
 }
+.color{
+  color: snow;
+}
+
 .logo span{
   font-family:'Pacifico', cursive ;
 }

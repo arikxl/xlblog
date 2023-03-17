@@ -8,13 +8,14 @@ import BannerBottom from "../components/BannerBottom";
 import { sanityClient, urlFor } from '../sanity';
 import { Post } from "../typings";
 import Image from "next/image";
+import Link from "next/link";
+import PostPreview from "../components/PostPreview";
 
-interface Props{
+interface Props {
   posts: [Post]
 }
 
-export default function Home({posts}: Props) {
-  console.log('posts:', posts)
+export default function Home({ posts }: Props) {
   return (
     <div>
       <Head>
@@ -28,15 +29,15 @@ export default function Home({posts}: Props) {
         <div className="max-w-7xl mx-auto h-60 relative">
           <BannerBottom />
         </div>
-  
-  
-        <div className="max-w-7xl mx-auto py-20 px-4">
+
+
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2
+         lg:grid-cols-3 gap-3 md:gap-6 py-6 px-4">
           {posts.map((p) => (
-            <Image width={380} height={350} src={urlFor(p.mainImage).url()!} />
-            // <div key={p._id}>{ p.title}</div>
+            <PostPreview key={p._id} post={p}/>
           ))}
         </div>
-       
+
         <Footer />
       </main>
     </div>

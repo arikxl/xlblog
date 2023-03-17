@@ -3,6 +3,8 @@ import React from 'react'
 import PortableText from 'react-portable-text';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
+import PostCommentsForm from '../../components/PostCommentsForm';
+import { serializers } from '../../data/serializers';
 import { sanityClient, urlFor } from '../../sanity';
 import { Post } from '../../typings';
 
@@ -19,7 +21,7 @@ const PostPage = ({ post }: Props) => {
                 alt={post.title}
                 className="w-full h-96 object-cover"
             />
-            <section className="max-w-3xl mx-auto">
+            <section className="max-w-3xl mx-auto mb-10">
                 <article className="w-full mx-auto p-5 bg-secondaryColor/5">
                     <h1 className="font-titleFont font-medium text-[32px] text-primary border-b-[1px] border-b-cyan-800 mt-10 mb-3">
                         {post.title}
@@ -39,19 +41,12 @@ const PostPage = ({ post }: Props) => {
                     <div className="mt-10">
                         <PortableText dataset={process.env.NEXT_PUBLIC_SANITY_DATASET || 'production'}
                             projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}
-                            content={post.body}
-                            serializers={{
-                                h1: (props: any) => (
-                                    <h1 className="text-3xl font-bold my-5 font-titleFont"
-                                        {}
-                                    />
-                                )
-                             }}
-                        />
-
-                      
+                            content={post.body} serializers={serializers}
+                        />  
                     </div>
                 </article>
+                <hr className="max-w-lg my-5 mx-auto border[1px] border-secondaryColor"/>
+                <PostCommentsForm postId={post._id } />
             </section>
             <Footer />
         </>

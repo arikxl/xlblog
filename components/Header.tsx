@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 import AppLogo from './AppLogo';
@@ -8,7 +7,7 @@ const Header = () => {
     <div className="w-full h-20 border-b-[1px] border-b-black font-titleFont sticky top-0 bg-white z-50 px-4">
       <div className="max-w-7xl h-full mx-auto flex justify-between items-center">
         <Link href="/">
-          <AppLogo />
+          <AppLogo color='' />
         </Link>
         <div>
           <ul className="hidden lg:inline-flex gap-8 uppercase text-sm font-semibold">

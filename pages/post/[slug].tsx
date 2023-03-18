@@ -1,6 +1,7 @@
 import { GetStaticProps } from 'next';
 import React from 'react'
 import PortableText from 'react-portable-text';
+import CommentList from '../../components/CommentList';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import PostCommentsForm from '../../components/PostCommentsForm';
@@ -46,7 +47,8 @@ const PostPage = ({ post }: Props) => {
                     </div>
                 </article>
                 <hr className="max-w-lg my-5 mx-auto border[1px] border-secondaryColor"/>
-                <PostCommentsForm postId={post._id } />
+                <PostCommentsForm postId={post._id} />
+                <CommentList comments={post.comments}/>
             </section>
             <Footer />
         </>
@@ -83,6 +85,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
             name,
             image
         },
+        "comments":*[_type == "comment" && post._ref == ^._id && approved == true],
         description,
         mainImage,
         slug,

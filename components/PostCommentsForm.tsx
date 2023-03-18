@@ -18,7 +18,7 @@ const PostCommentsForm = ({ postId }: Props) => {
     const { register, handleSubmit, formState: { errors } } = useForm<Inputs>();
 
     const onSubmit: SubmitHandler<Inputs> = (data) => {
-        fetch("api/createComment", {
+        fetch("/api/createComment", {
             method: "POST",
             body: JSON.stringify(data)
         }).then(() => {

@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { useSession, signIn, signOut } from "next-auth/react"
+
 
 import AppLogo from './AppLogo';
 
@@ -24,7 +26,11 @@ const Header = () => {
               alt="Arik Alexandrov" />
             <p className="text-sm font-medium">Shalom Stranger!</p>
           </div>
-          <button className="uppercase text-sm border-[1px] border-primaryColor hover:border-secondaryColor px-4 py-1 font-semibold hover:text-white rounded-md hover:bg-secondaryColor transition-all duration-300 active:bg-yellow-600">
+          <button onClick={() => signIn()}
+            className="uppercase text-sm border-[1px] border-primaryColor
+             hover:border-secondaryColor px-4 py-1 font-semibold
+              hover:text-white rounded-md hover:bg-secondaryColor
+               transition-all duration-300 active:bg-yellow-600">
             Sign In
           </button>
         </div>

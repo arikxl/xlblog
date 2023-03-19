@@ -7,7 +7,7 @@ export interface Post {
         name: string;
         image: string;
     };
-    comments: Comment[];
+    comments: [Comment];
     description: string;
     mainImage: {
         asset: {
@@ -27,6 +27,7 @@ export interface Comment {
     approved: boolean;
     email: string;
     name: string;
+    comment: string;
     post: {
         _ref: string;
         _type: string;

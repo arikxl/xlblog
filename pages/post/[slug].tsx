@@ -22,12 +22,12 @@ const PostPage = ({ post }: Props) => {
                 alt={post.title}
                 className="w-full h-96 object-cover"
             />
-            <section className="max-w-3xl mx-auto mb-10">
+            <section className="max-w-3xl mx-auto mb-10 ">
                 <article className="w-full mx-auto p-5 bg-secondaryColor/5">
-                    <h1 className="font-titleFont font-medium text-[32px] text-primary border-b-[1px] border-b-cyan-800 mt-10 mb-3">
+                    <h1 className=" font-titleFont font-medium text-[32px] text-primary border-b-[1px] border-b-cyan-800 mt-10 mb-3">
                         {post.title}
                     </h1>
-                    <h2 className="font-bodyFont text-[24px] text-gray-500 mb-2">
+                    <h2 className=" font-bodyFont text-[24px] text-gray-500 mb-2">
                         {post.description}
                     </h2>
                     <div className="flex items-center gap-2">

@@ -17,6 +17,8 @@ type Props = {
 const PostCommentsForm = ({ postId }: Props) => {
 
     const { data: session } = useSession();
+    const [email, setEmail] = useState("");
+    const [name, setName] = useState("");
     const [submitted, setSubmitted] = useState(false);
     const [userError, setUserError] = useState("");
     const { register, handleSubmit, formState: { errors } } = useForm<Inputs>();
@@ -51,6 +53,14 @@ const PostCommentsForm = ({ postId }: Props) => {
         )
     };
 
+    const handleChange = (e: any) => {
+        if (e.target.name === "name") {
+            setName(e.target.value);
+        } else {   
+            setEmail(e.target.value);
+        }
+    }
+
     return (
         <>
             {submitted
@@ -72,10 +82,11 @@ const PostCommentsForm = ({ postId }: Props) => {
                                 <input
                                     {...register("name", { required: true })}
                                     type="text" placeholder='Who are you?'
-                                    value={session ? session?.user!.name! : ""}
+                                    value={session ? session?.user!.name! : name}
+                                    onChange={(e) => handleChange(e)} name="name"
                                     className="text-base placeholder:text:sm border-b-[1px]
-                         border-secondaryColor py-1 px-4 outline-none
-                         focus-within:shadow-xl shadow-secondaryColor" />
+                                    border-secondaryColor py-1 px-4 outline-none
+                                    focus-within:shadow-xl shadow-secondaryColor" />
                             </label>
 
                             <label className="flex flex-col">
@@ -83,17 +94,21 @@ const PostCommentsForm = ({ postId }: Props) => {
                                 <input
                                     {...register("email", { required: true })}
                                     type="email" placeholder='whats your mail?'
-                                    value={session ? session?.user!.email! : ""}
+                                    value={session ? session?.user!.email! : email}
+                                    onChange={(e)=>handleChange(e)} name="email"
+                                
                                     className="text-base placeholder:text:sm border-b-[1px]
-                         border-secondaryColor py-1 px-4 outline-none
-                          focus-within:shadow-xl shadow-secondaryColor" />
+                                     border-secondaryColor py-1 px-4 outline-none
+                                        focus-within:shadow-xl shadow-secondaryColor" />
                             </label>
 
                             <label className="flex flex-col">
                                 <span className="font-titleFont font-semibold text-base">Comment</span>
                                 {errors.comment && (
-                                    <p className="text-sm font-titleFont font-semibold text-red-500 my-1 px-4">Don't forget to comment...</p>  
-                                ) }
+                                    <p className="text-sm font-titleFont font-semibold text-red-500 my-1 px-4">
+                                        Don't forget to comment...
+                                    </p>
+                                )}
                                 <textarea
                                     {...register("comment", { required: true })}
                                     placeholder='Comment here please' rows={5}

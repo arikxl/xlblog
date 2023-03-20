@@ -8,6 +8,7 @@ import {
   BsGithub,
 } from "react-icons/bs";
 
+
 export const bannerData = [
     {
         id: 101,

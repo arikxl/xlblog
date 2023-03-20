@@ -21,7 +21,7 @@ const Footer = () => {
           {
             footerData.map(d => (
               <Link key={d.id} href={d.link} target="_blank" rel="noopener">
-                <d.img className="w-6 h-6 text-white/50
+                <d.img className="w-6 h-6 text-white/50 rounded-full
                hover:text-white duration-300 cursor-pointer" />
               </Link>
             ))

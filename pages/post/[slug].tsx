@@ -23,7 +23,7 @@ const PostPage = ({ post }: Props) => {
                 className="w-full h-96 object-cover"
             />
             <section className="max-w-3xl mx-auto mb-10 ">
-                <article className="w-full mx-auto p-5 bg-secondaryColor/5">
+                <article className="w-full mx-auto p-5 bg-secondaryColor/10">
                     <h1 className=" font-titleFont font-medium text-[32px] text-primary border-b-[1px] border-b-cyan-800 mt-10 mb-3">
                         {post.title}
                     </h1>
@@ -39,7 +39,7 @@ const PostPage = ({ post }: Props) => {
                             - Published at {new Date(post.publishedAt).toLocaleDateString()}
                         </p>
                     </div>
-                    <div className="mt-10">
+                    <div className="mt-10 ">
                         <PortableText dataset={process.env.NEXT_PUBLIC_SANITY_DATASET || 'production'}
                             projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}
                             content={post.body} serializers={serializers}

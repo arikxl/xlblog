@@ -1,4 +1,5 @@
 import { GetStaticProps } from 'next';
+import Head from 'next/head';
 import React from 'react'
 import PortableText from 'react-portable-text';
 import CommentList from '../../components/CommentList';
@@ -17,6 +18,10 @@ const PostPage = ({ post }: Props) => {
 
     return (
         <>
+            <Head>
+                <title>{post.title}</title>
+                <link rel="icon" href="https://res.cloudinary.com/arikxl/image/upload/v1679430740/Ella2023/haogdktdotxczrtiuake.png" />
+            </Head>
             <Header />
             <img src={urlFor(post.mainImage).url()!}
                 alt={post.title}

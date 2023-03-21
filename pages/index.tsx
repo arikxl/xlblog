@@ -20,7 +20,7 @@ export default function Home({ posts }: Props) {
     <div>
       <Head>
         <title>XLblog</title>
-        <link rel="icon" href="https://res.cloudinary.com/arikxl/image/upload/v1678745162/Ella2023/ntinbkc5taw9wrrspllq.png" />
+        <link rel="icon" href="https://res.cloudinary.com/arikxl/image/upload/v1679430740/Ella2023/haogdktdotxczrtiuake.png" />
       </Head>
 
       <main className="font-bodyFont">

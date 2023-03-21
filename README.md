@@ -1,6 +1,6 @@
-XL Blog
+XLblog
 
-Welcome to XL Blog, a simple and user-friendly blogging platform built with React, Next.js, Sanity, and Tailwind CSS.
+Welcome to XLblog, a simple and user-friendly blogging platform built with React, Next.js, Sanity, and Tailwind CSS.
 This app allows you to read blog posts and comment.
 It is fully responsive and comes with a sleek and modern design.
 

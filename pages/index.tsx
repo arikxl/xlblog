@@ -26,7 +26,7 @@ export default function Home({ posts }: Props) {
       <main className="font-bodyFont">
         <Header />
         <Banner />
-        <div className="max-w-7xl mx-auto h-60 relative">
+        <div className="max-w-full mx-auto h-60 relative">
           <BannerBottom />
         </div>
 

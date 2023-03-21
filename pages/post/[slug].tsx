@@ -1,14 +1,14 @@
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
-import React from 'react'
 import PortableText from 'react-portable-text';
-import CommentList from '../../components/CommentList';
-import Footer from '../../components/Footer';
+
 import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import CommentList from '../../components/CommentList';
 import PostCommentsForm from '../../components/PostCommentsForm';
+import { Post } from '../../typings';
 import { serializers } from '../../data/serializers';
 import { sanityClient, urlFor } from '../../sanity';
-import { Post } from '../../typings';
 
 type Props = {
     post: Post

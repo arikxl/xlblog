@@ -8,7 +8,34 @@ import {
   BsGithub,
 } from "react-icons/bs";
 
+import bannerImgOne from "../public/images/kids.jpg";
+import bannerImgTwo from "../public/images/football.jpg";
+import bannerImgThree from "../public/images/prog.jpg";
+import bannerImgFour from "../public/images/gaming.jpg";
 
+
+export const sliderData = [
+    {
+        id: 401,
+        img: bannerImgOne,
+        alt:'arik alexandrov'
+    },
+    {
+        id: 402,
+        img: bannerImgTwo,
+        text: 'this is terner'
+    },
+    {
+        id: 403,
+        img: bannerImgThree,
+        text: 'arik alexandrov'
+    },
+    {
+        id: 404,
+        img: bannerImgFour,
+        text: 'gaming arikxl'
+    }
+];
 export const bannerData = [
     {
         id: 101,

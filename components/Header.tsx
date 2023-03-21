@@ -14,14 +14,14 @@ const Header = () => {
         <Link href="/">
           <AppLogo color='' />
         </Link>
-        <div>
+        {/* <div>
           <ul className="hidden lg:inline-flex gap-8 uppercase text-sm font-semibold">
             <li className="headerLi">Posts</li>
             <li className="headerLi">Categories</li>
-            <li className="headerLi">Contact</li>
+            <li className="headerLi">About</li>
           </ul>
-        </div>
-        <div className="flex items-center gap-8 text-lg">
+        </div> */}
+        <div className="flex items-center gap-6 text-lg ml-4">
           <div className="flex items-center gap-1">
             <img className="w-8 h-8 rounded-full bg-bgColor "
               src={
@@ -30,13 +30,13 @@ const Header = () => {
                   : `https://api.dicebear.com/5.x/avataaars-neutral/svg?seed=${new Date().getHours()}`
               }
               alt={session ? session?.user!.name! : "Arik Alexandrov"} />
-            <p className="text-sm font-medium">
+            <p className="hidden lg:inline text-sm font-medium">
               {session ? session?.user!.name : 'Shalom Stranger!'}
             </p>
           </div>
           <button onClick={() => { session ? signOut() : signIn() }}
             className="uppercase text-sm border-[1px] border-primaryColor
-             hover:border-secondaryColor px-4 py-1 font-semibold
+             hover:border-secondaryColor px-4 py-2 font-semibold
               hover:text-white rounded-md hover:bg-secondaryColor
                transition-all duration-300 active:bg-yellow-600">
             {session ? 'Sign Out' : 'Sign In'}
